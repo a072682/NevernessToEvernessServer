@@ -1,7 +1,10 @@
 // utils/cloudinary.js
 //負責設定雲端連接設定
 const cloudinary = require('cloudinary').v2;//.v2 是指 Cloudinary 套件提供的第二版 API
-require('dotenv').config();//讀取.env資料
+
+//如果要上傳Vercel 以下內容要移除
+//require('dotenv').config();//讀取.env資料
+//如果要上傳Vercel 以上內容要移除
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

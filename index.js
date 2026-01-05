@@ -3,7 +3,10 @@ const app = express();// 使用 express() 建立一個應用程式實例
 const pool = require('./db/db');// 載入我們自己寫的資料庫連線模組（也就是 db.js）
 const cors = require('cors');//匯入中介層套件工具
 const cookieParser = require('cookie-parser');//將 Cookie 字串轉換成token讓後端可以讀取
-require('dotenv').config();// 載入 dotenv 以支援 .env 環境變數
+
+//如果要上傳Vercel 以下內容要移除
+//require('dotenv').config();// 載入 dotenv 以支援 .env 環境變數
+//如果要上傳Vercel 以上內容要移除
 
 app.use(express.json());// 解析 JSON 格式的 request body
 
