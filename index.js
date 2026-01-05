@@ -66,8 +66,13 @@ app.use('/reservation', gameReservationRoutes);
 app.use('/images', imagesRoutes);
 //#endregion
 
+//如果要上傳Vercel 以下內容要移除
+// 啟動伺服器
+// app.listen(process.env.PORT, () => {
+//     console.log(`伺服器啟動於 http://localhost:${process.env.PORT}`);
+// });
+//如果要上傳Vercel 以上內容要移除
 
-// ✅ 啟動伺服器
-app.listen(process.env.PORT, () => {
-    console.log(`伺服器啟動於 http://localhost:${process.env.PORT}`);
-});
+//如果要上傳Vercel 新增以下內容
+module.exports = app;
+//如果要上傳Vercel 新增以上內容
