@@ -8,6 +8,7 @@ const pool = new Pool({ // 建立一個新的 Pool 實例，裡面傳入連線�
     database: process.env.DB_DATABASE,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
+    ssl: { rejectUnauthorized: false },
 });
 
 module.exports = pool; // 將這個 pool 導出（export），讓其他檔案可以使用
