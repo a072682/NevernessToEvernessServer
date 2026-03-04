@@ -50,6 +50,12 @@ app.get('/test-db', async (req, res) => {
     }
 });
 
+// Render 保持喚醒用
+app.get('/health', (req, res) => {
+    console.log('敲擊提示', new Date().toISOString());
+    res.status(200).send('OK');
+});
+
 //#region 登入相關API
 app.use('/auth', authRoutes);
 //#endregion
